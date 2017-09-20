@@ -2,9 +2,9 @@
 
 ### NOTE - EVERYTHING IN THIS ARTICLE IS MEANT FOR EDUCATIONAL PURPOSES ONLY.
 
-"The enciphering and deciphering of messages in secret code or cipher; also :  the computerized encoding and decoding of information" - [Merriam-Webster Dictionary](https://www.merriam-webster.com/dictionary/cryptography). Enigma, hashing, and the Caesar Cipher are all examples of cryptogrophy. 
+"The enciphering and deciphering of messages in secret code or cipher; also :  the computerized encoding and decoding of information" - [Merriam-Webster Dictionary](https://www.merriam-webster.com/dictionary/cryptography). Enigma, hashing, and the Caesar Cipher are all examples of cryptography. 
 
-Cryptography can be applied to military communities, electronic commerce, ATM cards, computer passwords, etc. Cryptography used to be synonymous with encryption, but modern more complex, mathematics theory based cryptography sets encryption and cryptogrophy apart. Such cryptographic algorithms generate theoretically non-collidable complex multi-character strings that can be used to make sure files aren't modified during transfer as files/text/whatever always generate the same 'hash'.
+Cryptography can be applied to military communities, electronic commerce, ATM cards, computer passwords, etc. Cryptography used to be synonymous with encryption, but modern more complex, mathematics theory based cryptography sets encryption and cryptography apart. Such cryptographic algorithms generate theoretically non-collidable complex multi-character strings that can be used to make sure files aren't modified during transfer as files/text/whatever always generate the same 'hash'.
 
 Ex. If we SHA-1 hash "Cryptography" we get:
 
@@ -228,7 +228,7 @@ ________________________________________________________________________________
 
 ## In conclusion
 
-Modern cryptogrophy is complex, yet powerful, *but* it does have it's flaws as shown with hashcat. Luckily, cryptogrophy is hard to crack even with hashcat, and as methods grow more and more complex it will only become harder.
+Modern cryptography is complex, yet powerful, *but* it does have it's flaws as shown with hashcat. Luckily, cryptography is hard to crack even with hashcat, and as methods grow more and more complex it will only become harder.
 
 ## References
 [Hashcat](https://hashcat.net/hashcat/) <br>
