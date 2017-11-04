@@ -1,9 +1,5 @@
 title: A Security Blog - gdifiore
 author: gdifiore
-description: > # this means to ignore newlines until "baseurl:"
-gabe@gabe-desktop:~$ cat about.txt
-<br>
-An infosec/Mobile Security and Development Blog
 github_username:  gdifiore
 
-theme: minima
+theme: minimal
