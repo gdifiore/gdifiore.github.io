@@ -1,15 +1,20 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab');
 html {
-    background: #f2f2f2;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Roboto Slab', serif;
 }
-.mainContent{
-    width: 50%;
-    margin: 100px auto;
+
+body {
+    background-image: linear-gradient(90deg, rgba(38,38,38,0.471) 3%, transparent 67%), url(../img/bg.jpg);
+    color: #FFF;
+}
+
+.all {
+    margin-left: 4%;
 }
 
 .main {
-    font-size: 50px;
-    color: #2d2b2b;
+    margin-top: 2%;
+    font-size: 55px;
 }
 
 .smallText {
@@ -19,25 +24,30 @@ html {
 }
 
 .subText {
-    margin-top: 0;
+    margin-top: 3%;
     padding-top: 0;
     font-size: 18px;
 }
 
-a, a:visited, a:active {
-    color: #595959;
-    text-decoration: none;
+.about {
+    font-size: 32px;
+    width: 35%;
 }
 
-@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+a,
+a:visited,
+a:active {
+    text-decoration: none;
+    color: #FFF;
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
     .main {
         font-size: 40px;
     }
-
     .smallText {
         font-size: 20px;
     }
-
     .subText {
         font-size: 12px;
     }
