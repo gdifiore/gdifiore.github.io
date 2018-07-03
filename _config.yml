@@ -1,9 +1,0 @@
-title: root@gdifiore
-description: Programming and security blog
-author: gdifiore
-email: difioregabe@gmail.com
-github_username:  gdifiore
-theme: jekyll-theme-minimal
-
-markdown: kramdown
-highlighter: rouge
