@@ -3,7 +3,13 @@ description: Programming and security blog
 author: gdifiore
 email: difioregabe@gmail.com
 github_username:  gdifiore
-theme: minimal
 
+baseurl: "/blog"
 markdown: kramdown
 highlighter: rouge
+theme: minima
+gems:
+  - jekyll-feed
+exclude:
+  - Gemfile
+  - Gemfile.lock
