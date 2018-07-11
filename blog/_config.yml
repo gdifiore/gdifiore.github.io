@@ -1,6 +1,10 @@
 title: root@gdifiore
+description: Programming and security blog
 author: gdifiore
-github_username: gdifiore
-gitlab_username: gdifiore
+email: difioregabe@gmail.com
+github_username:  gdifiore
 
-theme: minimal
+baseurl: "/blog"
+markdown: kramdown
+highlighter: rouge
+theme: minima
