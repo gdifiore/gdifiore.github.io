@@ -7,4 +7,4 @@ github_username:  gdifiore
 baseurl: "/blog"
 markdown: kramdown
 highlighter: rouge
-theme: minima
+theme: jekyll-theme-minimal
