@@ -16,4 +16,4 @@ This post will explain (albeit, poorly) C functions and how to make them.
 
 <hr>
 
-<center>Me on: <a href="https://github.com/gdifiore/">GitHub</a> | <a href="https://twitter.com/gdifiore">Twitter</a></center>
+<center>Me on: <a href="https://github.com/gdifiore/">GitHub</a> | <a href="https://twitter.com/gdifiore_">Twitter</a></center>
