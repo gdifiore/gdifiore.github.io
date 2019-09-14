@@ -1,59 +1,26 @@
 html {
-  font-family: 'Source Code Pro', monospace;
-  background: #20242c;
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  background-image: url("../../image.jpg");
+  no-repeat center center fixed; 
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
 }
 
 .content {
-  margin-left: 10%;
-  margin-top: 3%;
-  float: left;
-}
-
-.comment {
-  color: #3E4853;
-}
-
-span {
+  margin-left: 12%;
+  font-size: 125%;
+  margin-top: 5%;
   color: white;
 }
 
-.red {
-  color: #B04C58;
+h1 {
+  font-size: 6em;
+  color: white;
 }
 
-.string {
-  color: #95B47B;
-}
-
-.stackoverflow {
-  color: #d88f36;
-}
-
-.github {
-  color: #A57A9E;
-}
-
-.email {
-  color: #70BEB7;
-}
-
-.blog {
-  color: #2979FF;
-}
-
-.print {
-  color: #7d8fa3;
-}
-
-.light-blue {
-  color: #84a8e0;
-}
-
-a {
+.fa {
+  color: white;
   text-decoration: none;
-  color: black;
-}
-
-a:hover {
-  background: rgba(197, 207, 219,.3);
 }

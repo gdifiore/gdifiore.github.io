@@ -1,3 +1,3 @@
 # gdifiore.github.io
 
-blog
+site
