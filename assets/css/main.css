@@ -1,7 +1,6 @@
 html {
   font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
-  background-image: url("../../image.jpg");
-  no-repeat center center fixed; 
+  background-image: url("../img/image.jpg");
         -webkit-background-size: cover;
         -moz-background-size: cover;
         -o-background-size: cover;
