@@ -1,1 +1,8 @@
-theme: jekyll-theme-minimal
+theme: jekyll-apple
+gems:
+  - jekyll-paginate
+  - jekyll-sitemap
+
+permalink: /:year/:month/:day/:title/
+paginate_path: /posts/:num/
+paginate: 5
