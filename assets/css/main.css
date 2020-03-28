@@ -1,25 +1,45 @@
-html {
-  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
-  background-image: url("../img/image.jpg");
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        -o-background-size: cover;
-        background-size: cover;
+html, body {
+  font-family: 'Open Sans', sans-serif;
 }
 
-.content {
-  margin-left: 12%;
-  font-size: 125%;
-  margin-top: 5%;
-  color: white;
+body {
+  display: flex;
+  align-items: center;
+  background-color: #151019;
 }
 
 h1 {
-  font-size: 6em;
+  font-size: 300%;
+}
+
+h4 {
+  font-size: 125%;
+}
+
+.content {
+  font-size: 125%;
+	z-index: 1;
+  text-align: center;
+  color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: 0 auto;
+  -webkit-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
   color: white;
 }
 
 .fa {
   color: white;
   text-decoration: none;
+}
+
+.background {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
 }
