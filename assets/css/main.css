@@ -9,7 +9,7 @@ body {
 }
 
 h1 {
-  font-size: 300%;
+  font-size: 325%;
 }
 
 h4 {
@@ -33,6 +33,7 @@ h4 {
 .fa {
   color: white;
   text-decoration: none;
+  margin: 2%;
 }
 
 .background {
