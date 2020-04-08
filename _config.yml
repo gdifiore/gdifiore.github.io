@@ -17,7 +17,7 @@ minima:
     github:  gdifiore
 
 # Build settings
-theme: minimal
+theme: minima
 
 plugins:
  - jekyll-feed
