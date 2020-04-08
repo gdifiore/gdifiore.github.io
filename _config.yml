@@ -4,20 +4,20 @@ email: difioregabe@gmail.com
 description: > # this means to ignore newlines until "twitter_username:"
   A blog where I post about programming and security.
   
-show_excerpts: false # set to true to show excerpts on the homepage
+show_excerpts: true # set to true to show excerpts on the homepage
 
 # Minima date format
 # refer to http://shopify.github.io/liquid/filters/date/ if you want to customize this
 minima:
   date_format: "%b %-d, %Y"
 
-  # generate social links in footer
-  social_links:
-    twitter: gdifiore_
-    github:  gdifiore
+# generate social links in footer
+social_links:
+  twitter: gdifiore_
+  github:  gdifiore
 
 # Build settings
-theme: minima
+theme: minimal
 
 plugins:
  - jekyll-feed
