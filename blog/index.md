@@ -3,8 +3,6 @@
 <hr>
 
 ## [Armv8.5 Memory Tagging](Memory_Tagging.md)
-## [Armv8.5 Memory Tagging](Memory_Tagging.md)
-<sup>29 March 2020</sup>
 <sup>29 March 2020</sup>
 
 <hr>
