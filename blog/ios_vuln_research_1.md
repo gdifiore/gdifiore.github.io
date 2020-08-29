@@ -234,6 +234,8 @@ The comment specifically references older Apple Watches as vulnerable to this (d
 
 Therefore, exploitation is left as an exercise to the reader, but I'd enjoy seeing any further research/code on this :))
 
+**It is important to note that this is just a memory leak vulnerability, and at worst, will lead to a Denial-of-Service if succesfully exploited.**
+
 ## Conclusion
 
 Was this comment intentional?
