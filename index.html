@@ -1,19 +1,37 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, user-scalable=0">
-  <meta name="Description" content="Gabe DiFiore - A high school student interested in programming and security">
-  <meta property="og:image" content="assets/img/logo.png">
-  <meta property="og:title" content="Gabe DiFiore - A high school student interested in programming and security">
-  <title>Gabe DiFiore</title>
-  <link rel="stylesheet" href="assets/css/main.css">
-  <link rel="stylesheet" href="assets/css/animate.css">
-  <link rel="shortcut icon" type="image/png" href="/assets/img/favicon.png" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="student, programmer, embedded systems, web development, portfolio, projects">
+    <meta name="description" content="A portfolio website showcasing the development projects of Gabe DiFiore, a passionate student programmer.">
+    <meta name="author" content="Gabe DiFiore">
+    <meta name="robots" content="index, follow">
+    <title>Gabe DiFiore</title>
+    <style>
+        body {
+            font-family: monospace;
+            line-height: 1.5;
+            margin: 20px;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        section {
+            margin-bottom: 20px;
+        }
+        footer {
+            text-align: center;
+        }
 
+        a {
+          color: #333;
+        }
+        a:visited {
+            color: #333; /* Keeping the link color the same as unvisited */
+        }
+    </style>
 </head>
 
 <!--
@@ -27,26 +45,43 @@
   -->
 
 <body>
-  <header>
-    <div class="outer">
-      <div class="middle">
-        <div class="content">
-          <h1 class="animated fadeInLeft">Gabe DiFiore</h1>
-          <h4 class="animated fadeInLeft">a student interested in programming & security</h4>
-          <a class="animated fadeInUp fa ch fa-github fa-2x" target="_blank" href="https://github.com/gdifiore"></a>&nbsp;
-          <a class="animated fadeInUp fa ch fa-envelope fa-2x" target="_blank" href="mailto:difioregabe@gmail.com"></a>&nbsp;
-          <a class="animated fadeInUp fa fa-book fa-2x" target="_blank" href="blog/"></a>&nbsp;
-        </div>
-      </div>
-    </div>
-  </header>
-  <!--[if IE]>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
-  <![endif]-->
+    <header>
+        <h1>Gabe DiFiore's Portfolio</h1>
+    </header>
 
-  <canvas class="background"></canvas>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.2.2/particles.min.js"></script>
-  <script src="assets/js/main.js"></script>
+    <main>
+        <section>
+            <h2>About Me</h2>
+            <p>I'm a student at The Ohio State University interested in programming embedded systems and security.<br></p>
+        </section>
+
+        <section>
+            <h2>My Projects</h2>
+            <ul>
+                <li>
+                    <h3>libshotscope <a href="https://github.com/gdifiore/libshotscope">git</a></h3>
+                    <p>Goal is to be a math library used in a cheap golf shot tracker. Calculates ball speed, spin, distance, etc.</p>
+                </li>
+                <li>
+                    <h3>pyball <a href="https://github.com/gdifiore/pyball">git</a></h3>
+                    <p>Library for grabbing baseball statistics in Python, designed for use in Jupyter Notebooks.</p>
+                </li>
+                <li>
+                    <h3>nyt-games <a href="https://github.com/gdifiore/nyt-connections-tracker">connections git</a> <a href="https://github.com/gdifiore/nyt-crossword-comparison">mini-crossword git</a></h3>
+                    <p>Semi-complete tracking tools for New York Times games.</p>
+                </li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Contact</h2>
+            <p>Email: [lastnamefirstname]@gmail.com</p>
+            <p>Linkedin: <a href="https://linkedin.com/gdifiore">here</a></p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; Gabe DiFiore</p>
+    </footer>
 </body>
-
 </html>
