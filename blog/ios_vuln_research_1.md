@@ -254,4 +254,4 @@ If something in here is wrong or you just have something to share, drop me a lin
 You can learn anything with a bit of Googling :)
 
 <hr>
-<b><center>Me on: <a href="https://github.com/gdifiore/">GitHub</a> | <a href="https://twitter.com/gdifiore_">Twitter</a></center></b>
+<b><center>Me on: <a href="https://github.com/gdifiore/">GitHub</a>

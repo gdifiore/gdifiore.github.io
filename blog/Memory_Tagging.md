@@ -143,4 +143,4 @@ Please contact me on twitter if there are any problems with this post, or if you
 [qwertyoruiopz on twitter](https://twitter.com/qwertyoruiopz/status/1229837792370360324)
 
 <hr>
-<b><center>Me on: <a href="https://github.com/gdifiore/">GitHub</a> | <a href="https://twitter.com/gdifiore_">Twitter</a></center></b>
+<b><center>Me on: <a href="https://github.com/gdifiore/">GitHub</a>
