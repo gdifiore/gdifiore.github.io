@@ -184,11 +184,11 @@ Much cleaner. New config values can be added in one line, rather than adding an 
 
 ## What causes bad designs/implementations?
 
-1. Time restraints
+1. **Time restraints** <br>
 This assignment was (among other things) designed for our groups to use sprint-planning. So there was always a quick turn around between tasks, as well as bug-fixes, tesing of other PRs, code reviews, etc. it was easy to just say "Oh this works, I'll just push it to a PR".
 15 (really, 13) weeks is a quick turnaround for a project like this. Also, add on all the other classes, hobbies, and a social life and time starts to feel limited.
 
-2. Lack of Knowledge
+2. **Lack of Knowledge** <br>
 This was the first large assignment that I had to start from scratch (albeit, with a group) and that's very challenging the first time. The ability to pick the right design patterns, separate concerns, implement proper error handling are all things that were tested. And I certainly failed at first on some of those, but have learned and have a new outlook on design and implementation.
 
 ## Lessons learned
