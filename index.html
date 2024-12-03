@@ -12,37 +12,83 @@
         body {
             font-family: monospace;
             line-height: 1.5;
-            margin: 20px;
+            margin: 0 auto;
+            max-width: 800px; /* Center the content on large screens */
+            padding: 20px;
         }
+
         header {
             text-align: center;
             margin-bottom: 20px;
         }
+
+        h1, h2, h3 {
+            margin: 0.5em 0;
+        }
+
         section {
             margin-bottom: 20px;
         }
+
+        ul {
+            padding-left: 1em;
+        }
+
         footer {
             text-align: center;
+            margin-top: 20px;
+            font-size: 0.9em;
         }
 
         a {
-          color: #333;
+            color: #333;
         }
+
         a:visited {
-            color: #333; /* Keeping the link color the same as unvisited */
+            color: #333;
+        }
+
+        /* Responsive Design for smaller screens */
+        @media (max-width: 768px) {
+            body {
+                padding: 10px; /* Less padding on mobile */
+            }
+
+            header, footer {
+                text-align: center;
+            }
+
+            h1 {
+                font-size: 1.8em; /* Smaller heading size on mobile */
+            }
+
+            h2 {
+                font-size: 1.4em;
+            }
+
+            h3 {
+                font-size: 1.2em;
+            }
+
+            ul {
+                padding-left: 1em;
+            }
+
+            li h3 {
+                font-size: 1.1em;
+                line-height: 1.3em;
+            }
+        }
+
+        /* Extra small devices */
+        @media (max-width: 480px) {
+            body {
+                font-size: 0.9em; /* Slightly smaller font on very small screens */
+                line-height: 1.4;
+            }
         }
     </style>
 </head>
-
-<!--
- _______
-< quack >
- -------
- \
-  \
-   \ >()_
-      (__)__ _
-  -->
 
 <body>
     <header>

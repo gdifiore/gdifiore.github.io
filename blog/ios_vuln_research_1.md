@@ -1,6 +1,6 @@
 # Finding iOS Vulnerabilities Through... Apple's Comments?
 
-This post details a vulnerability uncovered while diffing XNU versions that was all noticed due to a large comment left by Apple.
+While exploring differences between XNU versions, I stumbled upon a patched memory management bug. Surprisingly, a detailed comment left by Apple provided the key to uncovering a subtle yet critical vulnerability impacting memory safety.
 
 ## Notes
 
@@ -22,10 +22,7 @@ However, the side view revealed a 52 line difference between files, so it can't 
 
 Apple was kind enough to leave behind a comment explaining exactly what problem the code fixed!
 
-(maybe they enjoy leaking stuff like [tihmstar](https://twitter.com/tihmstar/status/1295814618242318337)!)<br>
-((if you have that kernel please send it))
-
-Located under the function `ipc_kmsg_copyout_ool_descriptor` it reads:
+The comment left in `ipc_kmsg_copyout_ool_descriptor` reveals that the issue stems from the mismanagement of offsets during deallocation. Apple’s note explains how a physical copy into a rounded range could leak memory if the size being deallocated doesn’t cover the full range.
 ```c
 /*
  * vm_map_copy_overwrite does a full copy
@@ -123,7 +120,14 @@ vm_map_copy_validate_size(
 	return FALSE;
 }
 ```
-`vm_map_copy_validate_size()` is supposed to verify that the size of `copy` and `size` are the same. However, `copy->type == VM_MAP_COPY_ENTRY_LIST` so `vm_map_copy_validate_size()` is only (by nature) verifying a possible range of `size`, not it's true value.
+`vm_map_copy_validate_size` checks that the `size` field aligns with the actual size of the `vm_map_copy_t` object. However, its behavior differs based on the type of copy:
+
+- For `VM_MAP_COPY_OBJECT` and `VM_MAP_COPY_KERNEL_BUFFER`, it checks for exact matches.
+- For `VM_MAP_COPY_ENTRY_LIST`, it allows ranges due to page-size rounding.
+
+Page size mismatches (e.g., 16k user vs. 4k kernel) introduce misalignment risks. If the size field doesn't account for the full memory range during deallocation, leftover memory remains inaccessible but allocated, leading to leaks.
+
+If size doesn't match the rounded range, the kernel might only partially deallocate memory, leading to leaks.
 
 But there isn't anything inherently wrong with that, because `vm_map_copy_validate_size()` says that
 ```c
@@ -228,13 +232,25 @@ To fix this, XNU (`xnu-6153.141.1`) implemented a check if `size` is correct:
 	// ...
 ```
 
+The specific fix is contained in one line:
+```c
+	(rounded_addr & effective_page_mask) == (copy->offset & effective_page_mask)
+```
+By ensuring the size field is adjusted for alignment issues, they prevent partial deallocation.
+
 ## Exploitation
 
-The comment specifically references older Apple Watches as vulnerable to this (due to their kernel page sizes), but as I do not have access to a Watch (or a Mac at the moment for that matter), I am unable to investigate exploitation any further than a vulnerability analysis.
+The comment specifically references older Apple Watches as vulnerable to this (due to the mismatch of user & kernel page sizes). This is an issue, for example, large user pages split into smaller kernel pages increase the likelihood of misalignment.
 
-Therefore, exploitation is left as an exercise to the reader, but I'd enjoy seeing any further research/code on this :))
+One potential technique may be using mach messages.
 
-**It is important to note that this is just a memory leak vulnerability, and at worst, will lead to a Denial-of-Service if succesfully exploited.**
+Vulnerability Trigger:
+- An attacker crafts a mach message with a mismatched size field in the out-of-line (OOL) descriptor.
+- This message is passed to the kernel for processing. If the misalignment adjustment isn't applied, the kernel fails to deallocate the full range.
+
+Exploitation Goals:
+- Denial-of-Service: By repeatedly triggering the leak, attackers could exhaust kernel memory, leading to a system crash.
+- Information Disclosure (potential): Depending on what memory is leaked, it might reveal sensitive data.
 
 ## Conclusion
 
@@ -242,16 +258,12 @@ Was this comment intentional?
 
 We may never know, but it gave insight into the work of an Apple employee, and may be a first step for someone wanting to learn vulnerability research and exploitation.
 
-If something in here is wrong or you just have something to share, drop me a line on Twitter (linked below).
-
 ### References
 [(MIT) mach_msg_descriptor](http://web.mit.edu/darwin/src/modules/xnu/osfmk/man/mach_msg_descriptor.html)
 
 [(FreeBSD) COPY](https://www.freebsd.org/cgi/man.cgi?query=copyout&apropos=0&sektion=9&manpath=FreeBSD+11-current&format=html)
 
 [(Jonathan Levin) XXR - The XNU Xref](http://newosxbook.com/xxr/index.jl)
-
-You can learn anything with a bit of Googling :)
 
 <hr>
 <b><center>Me on: <a href="https://github.com/gdifiore/">GitHub</a>
