@@ -1,5 +1,8 @@
 <hr>
 
+## [Math Behind Fortnite Shrinking Circle](fort_circle.md)
+<sup>19 December 2024</sup>
+
 ## [Finding iOS Vulnerabilities Through... Apple's Comments?](ios_vuln_research_1.md)
 <sup>*Updated* 3 December 2024</sup>
 
