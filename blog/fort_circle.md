@@ -61,3 +61,5 @@ This same shrinking math also works for the "new" storms where at endgame, the i
 
 ## Conclusion
 Epic Games may use a different formula than this, but it's what I found first and the animation looks very similar.
+
+[Desmos Calculator](https://www.desmos.com/calculator/uzgt6jsagu)
