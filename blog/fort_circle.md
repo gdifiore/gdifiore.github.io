@@ -56,5 +56,8 @@ Specifically for Fortnite, $t$ can be represented as $\frac{t_p}{T}$, where $t_p
 A sample animation & implemented math can be found in this Desmos calculation.
 <iframe src="https://www.desmos.com/calculator/ssxsw7jhbv?embed" width="500" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
 
+This same shrinking math also works for the "new" storms where at endgame, the inner circle may be placed inside the current storm.
+<iframe src="https://www.desmos.com/calculator/dvxrdyeqou?embed" width="500" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+
 ## Conclusion
 Epic Games may use a different formula than this, but it's what I found first and the animation looks very similar.
