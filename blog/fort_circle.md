@@ -1,4 +1,4 @@
-py# Math Behind Fortnite Shrinking Circle
+# Math Behind Fortnite Shrinking Circle
 
 I've been playing a lot of Fortnite OG, and it got me wondering how exactly the "storm" circle shrinks into the non-concentric "safe" circle. The math behind it is actually extremely simple.
 
